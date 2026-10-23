@@ -164,7 +164,7 @@ func _add_player(id: int, player_info: Dictionary) -> Character:
 func get_spawn_point(id: int) -> Vector3:
 	var spawn_angle := fmod(float(id) * 2.399963229728653, 2.0 * PI)
 	var spawn_point := Vector2.from_angle(spawn_angle) * 10
-	return Vector3(spawn_point.x, 0, spawn_point.y)
+	return Vector3(spawn_point.x, 0.5, spawn_point.y)
 
 
 func _remove_player(id):
